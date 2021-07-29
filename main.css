@@ -9,8 +9,6 @@
 
 body{
     padding: 0;
-    left: 0%;
-    text-align: center;
     margin: 0;
     background-color: #111111;
     width: 100vw;
@@ -22,6 +20,10 @@ body{
 
 body::-webkit-scrollbar{
     display: none;
+}
+
+h1{
+    color: rgb(255, 86, 142);
 }
 
 span{
@@ -40,6 +42,9 @@ a{
     text-decoration: none;
 }
 
+nav{
+    height: 4rem;
+}
 
 nav li{
     font-size: 130%;
@@ -55,10 +60,18 @@ header{
 }
 
 .about{
-    display: inline-flex;
-    width: 100vw;
-    /* zoom: 1.2; */
+    padding-left: 25vw;
+    width: 50vw;
+    zoom: 1.2;
     opacity: 0;
+}
+
+.about img{
+    float: left;
+    border-radius: 50%;
+    border: solid rgb(255, 86, 142) 2px;
+    shape-outside: circle(100%);
+    margin-right: 2rem;
 }
 
 .container {
@@ -113,17 +126,7 @@ header{
     text-decoration: line-through;
 }
 
-.about img{
-    border-radius: 100%;
-    border: solid rgb(255, 86, 142) 2px;
-    shape-outside: circle(50%);
-    float: left;
-    margin-right: 20px;
-}
 
-.txtAbout h1{
-    color: rgb(255, 86, 142);
-}
 
 .byLine {
     font-size: 9px;
