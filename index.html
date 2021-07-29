@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jønsson.com</title>
+        <link rel="stylesheet" href="main.css"/>
+        
+        <script>
+            window.onload = oppstart;
+            
+            function oppstart()
+            {
+                document.getElementById("divAbout").style.animation = "fadeIn 4s alternate";
+                document.getElementById("divAbout").style.opacity = "1";
+                document.getElementById("seeMore").onclick = seeMore;
+                document.getElementById("clickStalk").onclick = GoToStalk;
+                
+                HoverOver();
+            }
+            
+            function seeMore()
+            {
+                window.scroll({top: 1000, behavior: "smooth"});
+            }
+            
+            function GoToStalk()
+            {
+                window.location.replace("stalk.html");
+            }
+            
+            function HoverOver(evt)
+            {
+                musX = evt.clientX;
+                musY = evt.clientY;
+                
+                if(evt.target.id == "clickStalk")
+                {
+                    alert("HEI");
+                }
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        <nav>
+            <ul>
+                <li id="home"><a href="index.html"><h3>Home</h3></a></li>
+                <li id="getInTouch"><a href="stalk.html"><h3>Stalk me!</h3></a></li>              
+            </ul>
+        </nav>
+        <header id="topBox">
+            <div class="about" id="divAbout">
+                <img src="me.jpg" height="200" width="200"/>
+                <div class="txtAbout">
+                <h1>LET me introduce myself!</h1>
+                <p>Hello! <span id="intro-name">My name is Aslak Aarflot Jønsson</span>, and I'm <br>
+                from Norway. I'm a student who freelance in my freetime
+                <br>
+                <br>
+                I will pleasently make you a website, in a simple modern design! Any <br> 
+                functionality you wish added? I can make a solution for you!
+                </p>
+                </div>
+                <div class="byLine">
+                    <p>-- This site and everything on it, were created by Aslak Aarflot Jønsson --</p>
+                </div>
+            </div>
+        </header>
+            
+            <div class="first-sight" id="clickStalk">
+                <h2 id="frstFreelancer">Freelancer</h2>
+                <h2 id="frstStudent">Student</h2>
+                <h2 id="frstFrontDev">Front-End Dev</h2>
+                <h2 id="frstGameDev">Game Dev</h2>
+            </div>
+        </div>
+        <!--<div class="portfolio">
+            <h3>My Works</h3>
+        </div>-->
+    </body>
+</html>
