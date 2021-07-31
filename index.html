@@ -11,20 +11,37 @@
             window.onload = oppstart;
             
             var toContact;
+            var navStalk;
+            var rotatingImg;
 
             function oppstart()
             {
                 document.getElementById("divAbout").style.animation = "fadeIn 1s alternate";
                 document.getElementById("divAbout").style.opacity = "1";
+
+                navStalk = document.getElementById("getInTouch");
+                navStalk.onclick = seeMore;
+
+                rotatingImg = document.getElementById("rotating-img");
+                window.onscroll = rotateImg;
+
                 toContact = document.getElementById("skip-to-contact");
                 toContact.onmouseenter = changeContactText;
                 toContact.onmouseleave = changeBackContactText;
-                HoverOver();
+                toContact.onclick = seeMore;
+                // HoverOver();
+            }
+
+            function rotateImg()
+            {
+                rotatingImg.style.transform = "rotate(90deg)";
             }
             
             function seeMore()
             {
-                window.scroll({top: 1000, behavior: "smooth"});
+                var element = document.querySelector("#stalk-section");
+
+                element.scrollIntoView({behavior: "smooth"});
             }
             
             function changeContactText()
@@ -39,17 +56,6 @@
                 toContact.innerHTML = "📫 Get in touch";
                 toContact.style.color = "rgb(255, 86, 142)";
             }
-            
-            function HoverOver(evt)
-            {
-                musX = evt.clientX;
-                musY = evt.clientY;
-                
-                if(evt.target.id == "clickStalk")
-                {
-                    alert("HEI");
-                }
-            }
         </script>
         
     </head>
@@ -58,14 +64,14 @@
         <nav>
             <ul>
                 <li id="home"><a href="index.html"><h3>Aslak Jønsson</h3></a></li>
-                <li id="getInTouch"><a href="stalk.html"><h3>Stalk me!</h3></a></li>              
+                <li id="getInTouch"><h3>Stalk me!</h3></li>              
             </ul>
         </nav>
 
         <header>
             <section class="header-section">
                 <div class="about" id="divAbout">
-                    <img class="header-content" src="me.jpg" height="200" width="200"/>
+                    <img class="header-content" id="rotating-img" src="me.jpg" height="200" width="200"/>
                     <div class="header-content">
                         <h1>Are you ready to get your own website?</h1>
                         <p>Let me introduce myself! <span id="intro-name">My name is Aslak Aarflot Jønsson</span>, and based
@@ -111,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section class="stalk-section">
+        <section class="stalk-section" id="stalk-section">
             <div class="stalk-info">
                 <h2>You wanna <span class="hook-up">hook up</span> get in touch?</h2>
                 <p> When you are ready to take the next step, or you have 
