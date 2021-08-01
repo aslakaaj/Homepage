@@ -3,61 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Aslak Aarflot Jønsson</title>
+
         <link rel="icon" href="heart-icon.png">
         <link rel="stylesheet" href="main.css"/>
-        
-        <script>
-            window.onload = oppstart;
-            
-            var toContact;
-            var navStalk;
-            var rotatingImg;
-
-            function oppstart()
-            {
-                document.getElementById("divAbout").style.animation = "fadeIn 1s alternate";
-                document.getElementById("divAbout").style.opacity = "1";
-
-                navStalk = document.getElementById("getInTouch");
-                navStalk.onclick = seeMore;
-
-                rotatingImg = document.getElementById("rotating-img");
-                window.onscroll = rotateImg;
-
-                toContact = document.getElementById("skip-to-contact");
-                toContact.onmouseenter = changeContactText;
-                toContact.onmouseleave = changeBackContactText;
-                toContact.onclick = seeMore;
-                // HoverOver();
-            }
-
-            function rotateImg()
-            {
-                rotatingImg.style.transform = "rotate(90deg)";
-            }
-            
-            function seeMore()
-            {
-                var element = document.querySelector("#stalk-section");
-
-                element.scrollIntoView({behavior: "smooth"});
-            }
-            
-            function changeContactText()
-            {
-                toContact.innerHTML = "📭 Get in touch";
-                toContact.style.cursor = "pointer";
-                toContact.style.color = "white";
-            }
-
-            function changeBackContactText()
-            {
-                toContact.innerHTML = "📫 Get in touch";
-                toContact.style.color = "rgb(255, 86, 142)";
-            }
-        </script>
-        
+        <script src="script.js"></script>      
     </head>
     
     <body>
@@ -89,7 +40,7 @@
         <section class="content-section">
             <h2 class="skill-title">-- 🛠️ --</h2>
             <div class="skills">
-                <div class="skill-container">
+                <div class="skill-container" id="skill-container">
                     <h2>👨‍💻 Programming Languages</h2>
                     <ul>
                         <li>HTML & CSS</li>
@@ -99,7 +50,7 @@
                         <li>Unity3D</li>
                     </ul>
                 </div>
-                <div class="skill-container">
+                <div class="skill-container" id="skill-container">
                     <h2>🔥 Experience</h2>
                     <ul>
                         <li>2 Years of customer service</li>
@@ -107,7 +58,7 @@
                         <li></li>
                     </ul>
                 </div>
-                <div class="skill-container">
+                <div class="skill-container" id="skill-container">
                     <h2>💡 Other Skills</h2>
                     <ul>
                         <li>Native Norwegian Speaker</li>
