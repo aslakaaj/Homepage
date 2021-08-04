@@ -7,6 +7,7 @@ var skillContainer;
 
 function oppstart()
 {
+
     document.getElementById("divAbout").style.animation = "fadeIn 1s alternate";
     document.getElementById("divAbout").style.opacity = "1";
 
@@ -14,8 +15,6 @@ function oppstart()
     navStalk.onclick = seeMore;
 
     skillContainer = document.getElementById("skill-container");
-    skillContainer.onmouseenter = enlargeContainer;
-    skillContainer.onmouseleave = resetContainer;
 
     // rotatingImg = document.getElementById("rotating-img");
     // window.onscroll = rotateImg;
@@ -25,18 +24,6 @@ function oppstart()
     toContact.onmouseleave = changeBackContactText;
     toContact.onclick = seeMore;
     // HoverOver();
-}
-
-function enlargeContainer( )
-{
-    skillContainer.style.animation = "enlargeContainer 0.6s normal";
-    skillContainer.style.animationFillMode = "forwards";
-}
-
-function resetContainer()
-{
-    skillContainer.style.animation = "enlargeContainer 0.6s reverse";
-    skillContainer.style.animationFillMode = "forwards";
 }
 
 function rotateImg()
