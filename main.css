@@ -16,6 +16,7 @@
 
 #getInTouch:hover{
     color: rgb(255, 86, 142);
+    cursor: pointer;
 }
 
 body{
@@ -159,6 +160,13 @@ header{
     color: #111111;
     font-size: 1.3vmax;
     font-weight: bolder;
+    transition: width .5s, height .5s, box-shadow .5s;
+}
+
+.skill-container:hover{
+    width: 30vmax;
+    height: 25vmax;
+    box-shadow: 15px 15px 15px black;
 }
 
 .skill-container li{
@@ -210,4 +218,9 @@ footer{
 @keyframes fadeIn{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+@keyframes enlargeContainer {
+    from{width: 27vmax; height: 23vmax; padding: 0;}
+    to{width: 30vmax; height: 25vmax; padding: 1rem;}
 }
