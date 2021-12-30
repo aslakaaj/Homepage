@@ -99,6 +99,11 @@ nav li{
     position: fixed;
 }
 
+footer{
+    text-align: center;
+    font-weight: bolder;
+}
+
 /* #endregion */
 
 /* #region LANDING PAGE */
@@ -275,12 +280,13 @@ header{
     justify-content: space-between;
 }
 
-/* #endregion */
-
-footer{
-    text-align: center;
-    font-weight: bolder;
+@media screen and (max-width: 500px) {
+    footer{
+        margin-top: 200px;
+    }
 }
+
+/* #endregion */
 
 /* KEYFRAMES */
 @keyframes fadeIn{
