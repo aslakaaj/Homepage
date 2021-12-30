@@ -8,6 +8,9 @@
 
         <link rel="icon" href="heart-icon.png">
         <link rel="stylesheet" href="main.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script type="text/javascript" src="script.js"></script>      
     </head>
     
@@ -72,18 +75,23 @@
             <div class="stalk-info">
                 <h2>You wanna <span class="hook-up">hook up</span> get in touch?</h2>
                 <p> When you are ready to take the next step, or you have 
-                    questions, just send me an E-Mail and I'll
+                    questions, just fill out the form and I'll
                     answer you in no time!
                 </p>
             </div>
             <div class="stalk-container">
-                <!-- <div class="stalk-input"><input type="text" placeholder="Name"></div>
-                <div class="stalk-input"><input type="text" placeholder="Surname"></div>
-                <div class="stalk-input"><input type="text" placeholder="E-Mail"></div>
-                <div class="stalk-input"><input type="text" placeholder="Message"></div> -->
-                    <a href="mailto: aslak.jonsson@gmail.com">
+                <form action="https://formspree.io/f/mknygoep" method="post">
+                    <input class="stalk-input" name="Name" type="text" placeholder="Your Full Name..." required>
+                    <input class="stalk-input" name="E-Mail" type="email" placeholder="E-Mail Address..." required>
+                    <textarea id="stalk-txtArea" name="Message" placeholder="Your message..."></textarea>
+                    <div class="stalk-buttons">
+                        <button type="submit">Submit</button> 
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+                    <!-- <a href="mailto: aslak.jonsson@gmail.com">
                         <h1>aslak.jonsson@gmail.com</h1>
-                    </a>
+                    </a> -->
             </div>
         </section>
         <footer>
