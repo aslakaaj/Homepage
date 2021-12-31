@@ -52,10 +52,6 @@ p{
     font-weight: 100;
 }
 
-img {
-    box-shadow: 2px 2px rgb(207, 58, 118);
-}
-
 span{
     color: rgb(255, 86, 142);
     font-weight: bold;
@@ -97,6 +93,23 @@ nav li{
     color: white;
     display: grid;
     position: fixed;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    width: 32px;
+    height: 32px;
+}
+
+.social-icons img {
+    height: 100%;
+    width: 100%;
 }
 
 footer{
@@ -141,11 +154,17 @@ header{
     color: white;
 }
 
+img[class = "header-content"] {
+    box-shadow: 2px 2px rgb(207, 58, 118);
+    border-radius: 50%;
+}
+
 .about {
     margin: 12.1vh 0;
     display: inline-flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     width: 50vw;
     zoom: 1.45;
     opacity: 0;
@@ -153,13 +172,8 @@ header{
     /* background-color: rgba(12, 12, 12, 0.685); */
 }
 
-.about img {
-    border-radius: 50%;
-    /* border: dashed rgb(255, 86, 142) 4px; */
-}
-
 .about div {
-    width: 400px;
+    max-width: 400px;
     padding: 0;
 }
 
@@ -282,7 +296,7 @@ header{
 
 @media screen and (max-width: 500px) {
     footer{
-        margin-top: 200px;
+        margin-top: 170px;
     }
 }
 

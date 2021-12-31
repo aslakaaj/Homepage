@@ -26,10 +26,10 @@ function oppstart()
     // HoverOver();
 }
 
-function rotateImg()
-{
-    rotatingImg.style.transform = "rotate(90deg)";
-}
+// function rotateImg()
+// {
+//     rotatingImg.style.transform = "rotate(90deg)";
+// }
 
 function seeMore()
 {
