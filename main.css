@@ -163,7 +163,8 @@ img[class = "header-content"] {
     margin: 12.1vh 0;
     display: inline-flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     width: 50vw;
     zoom: 1.45;
     opacity: 0;
