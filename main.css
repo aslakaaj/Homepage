@@ -83,6 +83,16 @@ button[type=reset]{
     color: black;
 }
 
+button:hover{
+    cursor: pointer;
+    box-shadow: 3.5px 3.5px black;
+    animation: button-shadow 0.3s alternate;
+}
+button[type=submit]:hover{
+    box-shadow: rgb(207, 58, 118) 2px 2px;
+    animation: submit-button-shadow 0.3s alternate;
+}
+
 nav{
     height: 4rem;
     background-color: rgba(12, 12, 12, 0.685);
@@ -306,4 +316,14 @@ img[class = "header-content"] {
 @keyframes fadeIn{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+@keyframes submit-button-shadow{
+    from{box-shadow: rgb(207, 58, 118) 0px 0px;}
+    to{box-shadow: rgb(207, 58, 118) 2px 2px;}
+}
+
+@keyframes button-shadow{
+    from{box-shadow: black 0px 0px;}
+    to{box-shadow: black 3.5px 3.5px;}
 }
