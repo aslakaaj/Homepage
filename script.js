@@ -16,37 +16,26 @@ function oppstart()
 
     skillContainer = document.getElementById("skill-container");
 
-    // rotatingImg = document.getElementById("rotating-img");
-    // window.onscroll = rotateImg;
-
     toContact = document.getElementById("skip-to-contact");
-    toContact.onmouseenter = changeContactText;
-    toContact.onmouseleave = changeBackContactText;
     toContact.onclick = seeMore;
-    // HoverOver();
+    
+    //When user scroll, hide navbar
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
 }
 
-// function rotateImg()
-// {
-//     rotatingImg.style.transform = "rotate(90deg)";
-// }
 
 function seeMore()
 {
     var element = document.querySelector("#stalk-section");
 
     element.scrollIntoView({behavior: "smooth"});
-}
-
-function changeContactText()
-{
-    toContact.innerHTML = "📭 Get in touch";
-    toContact.style.cursor = "pointer";
-    toContact.style.color = "white";
-}
-
-function changeBackContactText()
-{
-    toContact.innerHTML = "📫 Get in touch";
-    toContact.style.color = "rgb(255, 86, 142)";
 }

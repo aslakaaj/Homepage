@@ -1,7 +1,7 @@
 /* #region MAIN THEME */
 #home {
     z-index: 20;
-    left: 40px;
+    /* left: 40px; */
     color: rgb(255, 86, 142);
 }
 
@@ -11,7 +11,7 @@
 
 #getInTouch{
     z-index: 20;
-    right: 40px;
+    /* right: 40px; */
 }
 
 #getInTouch:hover{
@@ -26,7 +26,7 @@ body{
     width: 100vw;
     color: white;
     font-family: "Roboto";
-    
+
     -ms-overflow-style: none;
 }
 
@@ -55,6 +55,21 @@ p{
 span{
     color: rgb(255, 86, 142);
     font-weight: bold;
+}
+
+.linkUnderline{
+    color: rgb(255, 86, 142);
+    font-weight: bold;
+
+    background-image: linear-gradient(90deg, rgb(255, 86, 142), rgb(255, 86, 142));
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+
+.linkUnderline:hover{
+    background-size: 100% 2px;
 }
 
 ul{
@@ -94,15 +109,29 @@ button[type=submit]:hover{
 }
 
 nav{
+    width: 100%;
     height: 4rem;
     background-color: rgba(12, 12, 12, 0.685);
+    /* position: fixed; */
+}
+
+nav ul{
+    width: 100%;
+    position: fixed;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    top: 0;
+    transition: top 0.3s;
 }
 
 nav li{
+    padding: 0 2rem;
     font-size: 130%;
     color: white;
-    display: grid;
-    position: fixed;
+    display: block;
 }
 
 .social-icons {
@@ -122,22 +151,28 @@ nav li{
     width: 100%;
 }
 
+.fiveStar::after{
+    content: "⭐⭐⭐⭐⭐";
+    font-size: smaller;
+}
+
 footer{
     text-align: center;
     font-weight: bolder;
+    margin-top: 170px;
 }
 
 /* #endregion */
 
 /* #region LANDING PAGE */
 header{
-    height: 150vh;
+    height: auto;
 }
 
 .header-section{
     position: relative;
     padding: 0 15vw;
-    height: 100vh;
+    height: auto;
 }
 
 .header-section::before {
@@ -155,9 +190,38 @@ header{
     margin: .5rem .5rem;
 }
 
-#skip-to-contact {
+.bottom-header{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+#skip-to-contact span{
     margin: 0 0;
+    text-decoration: none;
     color: rgb(255, 86, 142);
+
+    background-image: linear-gradient(90deg, rgb(255, 86, 142), rgb(255, 86, 142));
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    transition: background-size 300ms ease;
+}
+
+#skip-to-contact span::before{
+    content: "📫";
+}
+
+#skip-to-contact span:hover{
+
+    background-size: 80% 2px;
+
+    cursor: pointer;
+}
+
+#skip-to-contact span:hover::before{
+    content: "📭";
 }
 
 .header-content:hover::after {
@@ -229,7 +293,8 @@ img[class = "header-content"] {
 
 .stalk-section{
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    margin-top: 20rem;
     display: inline-flex;
     justify-content: center;
     align-content: center;
@@ -256,18 +321,6 @@ img[class = "header-content"] {
     align-content: center;
     flex-wrap: wrap;
 }
-/* 
-.stalk-container h1 {
-    transition: background-color .5s, padding .5s;
-    border-radius: 10px;
-    padding: 1rem 0;
-    
-}
-
-.stalk-container h1:hover {
-    padding: 1rem 2rem;
-    background-color: rgba(12, 12, 12, 0.685);
-} */
 
 .stalk-input{
     margin: 1rem 0;
@@ -304,13 +357,16 @@ img[class = "header-content"] {
     justify-content: space-between;
 }
 
-@media screen and (max-width: 500px) {
-    footer{
-        margin-top: 170px;
+
+/* #endregion */
+
+/* Meida Queries*/
+@media screen and (max-width: 1010px) {
+    .stalk-section{
+        margin: 0;
     }
 }
 
-/* #endregion */
 
 /* KEYFRAMES */
 @keyframes fadeIn{
