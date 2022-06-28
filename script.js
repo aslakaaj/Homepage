@@ -5,6 +5,8 @@ var navStalk;
 var rotatingImg;
 var skillContainer;
 
+var prevScrollpos;
+
 function oppstart()
 {
 
@@ -20,18 +22,25 @@ function oppstart()
     toContact.onclick = seeMore;
     
     //When user scroll, hide navbar
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-5rem";
-      }
-      prevScrollpos = currentScrollPos;
-    }
+    prevScrollpos = window.pageYOffset;
+    window.onscroll = hideNavBar;
 }
 
+function hideNavBar ()
+{
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) 
+      {
+        document.getElementById("navbar").style.top = "0";
+      } 
+
+      else 
+      {
+        document.getElementById("navbar").style.top = "-5rem";
+      }
+      
+      prevScrollpos = currentScrollPos;
+}
 
 function seeMore()
 {
