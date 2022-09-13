@@ -1,7 +1,10 @@
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 /* #region MAIN THEME */
 #home {
-    z-index: 20;
-    /* left: 40px; */
     color: rgb(255, 86, 142);
 }
 
@@ -9,7 +12,8 @@
     color: white;
 }
 
-#getInTouch{
+#getInTouch, #home{
+    user-select: none;
     z-index: 20;
     /* right: 40px; */
 }
@@ -20,6 +24,7 @@
 }
 
 body{
+    font-size: 1.6rem;
     padding: 0;
     margin: 0;
     background-color: #111111;
@@ -256,6 +261,86 @@ img[class = "header-content"] {
     margin: 0;
 }
 
+.works-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works-block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.works-div-left, .works-div-right {
+    justify-content: center;
+}
+
+.works-description{
+    display: none;
+    max-width: 30vmax;
+    user-select: none;
+}
+
+.works-description h1::before{
+    content: "🌶️ ";
+    text-shadow: none;
+}
+
+.works-description h1, .works-description p{
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+
+.works-description p{
+    font-weight: 300;
+}
+
+.works-description-content {
+    display: none;
+    font-size: clamp(1.5rem, 0.8em, 5rem);
+}
+
+.w-tandoori{
+    background-image: url("Images/tandoori.webp");
+}
+
+.works-img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.works-container {
+    transition: all .5s;
+
+    filter: grayscale(80%);
+    width: 30vmax;
+    min-height: 15rem;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.works-container:hover .works-img, 
+.works-container:focus .works-img{
+    transform: scale(1.2);
+}
+
+.works-container:hover, 
+.works-container:focus{
+    transform: scale(0.95);
+}
+
+/* .works-container:hover .works-img::before, 
+.works-container:focus .works-img::before{
+    display: block;
+} */
 .skills {
     width: 100vw;
     height: auto;
@@ -279,13 +364,14 @@ img[class = "header-content"] {
     color: #111111;
     font-size: 1.3vmax;
     font-weight: bolder;
-    transition: width .5s, height .5s, box-shadow .5s;
+    transition: all .5s;
 }
 
 .skill-container:hover{
-    width: 30vmax;
-    height: 25vmax;
-    box-shadow: 15px 15px 15px black;
+    /* width: 30vmax;
+    height: 25vmax; */
+    transform: scale(1.2);
+    box-shadow: 1rem 1rem 15px black;
 }
 
 .skill-container li{
@@ -378,6 +464,28 @@ img[class = "header-content"] {
     }
 }
 
+@media screen and (min-width: 820px) {
+    .works-description {
+        display: initial;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 3rem;
+    }
+
+    .works-block {
+        height: 20rem;
+    }
+
+    .works-div-left {
+        justify-content: start;
+    }
+    
+    .works-div-right {
+        justify-content: end;
+    }
+}
+
 
 /* KEYFRAMES */
 @keyframes fadeIn{
@@ -393,4 +501,9 @@ img[class = "header-content"] {
 @keyframes button-shadow{
     from{box-shadow: black 0px 0px;}
     to{box-shadow: black 3.5px 3.5px;}
+}
+
+@keyframes body-fade {
+    from{}
+    to{opacity: .3; filter: blur(3px);}
 }

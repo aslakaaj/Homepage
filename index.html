@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB8LFMRQ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB8LFMRQ3"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-GEB8LFMRQ3');
-</script>
+        gtag('config', 'G-GEB8LFMRQ3');
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Aslak Aarflot Jønsson</title>
 
-        <link rel="icon" href="heart-icon.png">
+        <link rel="icon" href="Images/Icons/heart-icon.png">
         <link rel="stylesheet" href="main.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -34,7 +34,7 @@
         <header>
             <section class="header-section">
                 <div class="about" id="divAbout">
-                    <img class="header-content" id="rotating-img" src="me.jpg" height="200" width="200"/>
+                    <img class="header-content" id="rotating-img" src="Images/me.jpg" height="200" width="200"/>
                     <div class="header-content">
                         <h1>Godag, I'm Aslak, developer</h1>
                         <p>Let me introduce myself! <span id="intro-name">My name is Aslak Aarflot Jønsson</span>, and based
@@ -53,16 +53,32 @@
                         <div class="bottom-header">
                             <h3 id="skip-to-contact"><span>Get in touch</span></h3>
                             <div class="social-icons">
-                                <a href="https://github.com/aslakaaj" target="_blank"><img src="Icons/git-icon.png" alt="Link to my GitHub"></a>
-                                <a href="https://twitter.com/aarflot_j" target="_blank"><img src="Icons/twitter-icon.png" alt="Link to my Twitter profile"></a>
-                                <a href="https://stackoverflow.com/users/16556370/aslak-aarflot-j%c3%b8nsson?tab=profile" target="_blank"><img src="Icons/stackoverflow-icon.png" alt="Link to my Stackoverflow"></a>
-                                <a href="https://www.fiverr.com/aslakjonsson" target="_blank"><img src="Icons/fiverr-icon.png" alt="Link to my Fiverr profile"></a>
+                                <a href="https://github.com/aslakaaj" target="_blank"><img src="Images/Icons/git-icon.png" alt="Link to my GitHub"></a>
+                                <a href="https://twitter.com/aarflot_j" target="_blank"><img src="Images/Icons/twitter-icon.png" alt="Link to my Twitter profile"></a>
+                                <a href="https://stackoverflow.com/users/16556370/aslak-aarflot-j%c3%b8nsson?tab=profile" target="_blank"><img src="Images/Icons/stackoverflow-icon.png" alt="Link to my Stackoverflow"></a>
+                                <a href="https://www.fiverr.com/aslakjonsson" target="_blank"><img src="Images/Icons/fiverr-icon.png" alt="Link to my Fiverr profile"></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </header>
+        <section id="works-section" class="works-section">
+            <div id="tandoori" class="works-div-left works-block">
+                <div class="works-container" onclick="focusOnWork('tandoori', 'tandoori-des')">
+                    <div class="works-img w-tandoori"></div>
+                </div>
+                <!-- <img src="Images/tandoori.webp" alt="Image of foods from Tandoori Mix"> -->
+                <div id="tandoori-des" class="works-description">
+                    <a href="https://www.tandoorimix.no/"><h1 class="works-title">Tandoori Mix Ørsta</h1></a>
+                    <p>DESIGN, WEB DEVELOPMENT</p>
+                    <p class="works-description-content">
+                        I developed a website for a local business in my area. This site displays their menu and who they are. 
+                        It also includes an order form. 
+                    </p>
+                </div>
+            </div>
+        </section>
         <section class="content-section">
             <h2 class="skill-title">-- 🛠️ --</h2>
             <div class="skills">
@@ -116,10 +132,10 @@
         </section>
         <footer>
             <div class="social-icons">
-                <a href="https://github.com/aslakaaj" target="_blank"><img src="Icons/git-icon.png" alt="Link to my GitHub"></a>
-                <a href="https://twitter.com/aarflot_j" target="_blank"><img src="Icons/twitter-icon.png" alt="Link to my Twitter profile"></a>
-                <a href="https://stackoverflow.com/users/16556370/aslak-aarflot-j%c3%b8nsson?tab=profile" target="_blank"><img src="Icons/stackoverflow-icon.png" alt="Link to my Stackoverflow"></a>
-                <a href="https://www.fiverr.com/aslakjonsson" target="_blank"><img src="Icons/fiverr-icon.png" alt="Link to my Fiverr profile"></a>
+                <a href="https://github.com/aslakaaj" target="_blank"><img src="Images/Icons/git-icon.png" alt="Link to my GitHub"></a>
+                <a href="https://twitter.com/aarflot_j" target="_blank"><img src="Images/Icons/twitter-icon.png" alt="Link to my Twitter profile"></a>
+                <a href="https://stackoverflow.com/users/16556370/aslak-aarflot-j%c3%b8nsson?tab=profile" target="_blank"><img src="Images/Icons/stackoverflow-icon.png" alt="Link to my Stackoverflow"></a>
+                <a href="https://www.fiverr.com/aslakjonsson" target="_blank"><img src="Images/Icons/fiverr-icon.png" alt="Link to my Fiverr profile"></a>
             </div>
             <p>COPYRIGHT ASLAK AARFLOT JØNSSON</p>
         </footer>
