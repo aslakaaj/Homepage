@@ -44,6 +44,10 @@ body::-webkit-scrollbar{
     font-weight: 400;
 }
 
+section {
+    margin-bottom: 10rem;
+}
+
 h1{
     color: rgb(255, 86, 142);
     text-shadow: 1px 1px rgb(207, 58, 118);
@@ -89,8 +93,8 @@ a{
 }
 
 button{
-    padding: 1vmax 2vmax;
-    font-size: large;
+    padding: 1vmax 1.5vmax;
+    font-size: x-large;
     font-weight: 500;
     color: white;
     border-radius: 5px;
@@ -119,16 +123,18 @@ nav{
 
 nav ul{
     width: 100%;
-    height: 5rem;
+    height: 8rem;
     position: fixed;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     
     top: 0;
     transition: top 0.3s;
     background-color: rgba(12, 12, 12, 0.685);
+    backdrop-filter: blur(.3rem) saturate(80%);
     z-index: 10;
 }
 
@@ -280,6 +286,7 @@ img[class = "header-content"] {
 
 .works-description{
     display: none;
+    margin-top: 3rem;
     max-width: 30vmax;
     user-select: none;
 }
@@ -316,8 +323,10 @@ img[class = "header-content"] {
     background-size: cover;
     background-position: center center;
 }
+
 .works-container {
     transition: all .5s;
+    border-radius: 0.5rem;
 
     filter: grayscale(80%);
     width: 30vmax;
@@ -460,7 +469,7 @@ img[class = "header-content"] {
     }
 
     nav ul{
-        height: 4rem;
+        height: 6rem;
     }
 }
 
@@ -491,6 +500,14 @@ img[class = "header-content"] {
 @keyframes fadeIn{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+@keyframes works-hover {
+    from {filter: grayscale(80%);}
+    to {filter: grayscale(0%);
+        box-shadow: .5rem .5rem 15px black;;
+        transform: translateY(-2rem);
+        transform: scale(1.07);}
 }
 
 @keyframes submit-button-shadow{

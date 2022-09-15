@@ -1,5 +1,5 @@
 window.onload = oppstart;
-            
+           
 var toContact;
 var navStalk;
 var rotatingImg;
@@ -11,6 +11,11 @@ var workClicked = false;
 
 function oppstart()
 {
+
+  document.onscroll = function ()
+  {
+    scrolling();
+  }
 
   document.getElementById("divAbout").style.animation = "fadeIn 1s alternate";
   document.getElementById("divAbout").style.opacity = "1";
@@ -28,6 +33,12 @@ function oppstart()
   window.onscroll = hideNavBar;
 }
 
+function scrolling() 
+{
+  var img = document.getElementById("rotating-img");
+  img.style.transform = "rotate(-" + window.scrollY/15 + "deg)";
+}
+
 function hideNavBar ()
 {
   var currentScrollPos = window.pageYOffset;
@@ -38,7 +49,7 @@ function hideNavBar ()
 
     else 
     {
-      document.getElementById("navbar").style.top = "-5rem";
+      document.getElementById("navbar").style.top = "-8rem";
     }
     
     prevScrollpos = currentScrollPos;
@@ -61,14 +72,14 @@ function focusOnWork(con_id, des_id) {
   {
     style.innerHTML = 
       'body > *:not(.works-section) {' +
-        'animation: body-fade 0.2s forwards' +
+        'animation: body-fade 0.2s forwards;' +
         '}' +
        '#' + des_id + ', #' + des_id + ' .works-description-content{' +
         'display: block;' + 
-        'animation: fadeIn 0.5s forwards' +
+        'animation: fadeIn 0.5s forwards;' +
        '}' +
        '#' + con_id + ' .works-container {' +
-        'filter: grayscale(0%);'
+        'animation: works-hover 0.5s forwards;'
        '}';
   
       ref.parentNode.insertBefore(style, ref)
